@@ -172,12 +172,19 @@ const gracefulShutdown = (signal) => {
 process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
 
-// Initialize database (async, sql.js), then start server
-db.init().then(() => {
-  startServer(DEFAULT_PORT);
-}).catch(err => {
-  console.error('❌ Failed to initialize database:', err);
-  process.exit(1);
-});
+// Initialize database, then start server (skip port listen on Vercel serverless)
+if (!process.env.VERCEL) {
+  db.init().then(() => {
+    startServer(DEFAULT_PORT);
+  }).catch(err => {
+    console.error('❌ Failed to initialize database:', err);
+    process.exit(1);
+  });
+} else {
+  db.init().catch(err => {
+    console.warn('⚠️ Vercel database initialization warning:', err.message);
+  });
+}
 
 module.exports = app;
+
