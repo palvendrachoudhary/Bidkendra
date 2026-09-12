@@ -88,7 +88,6 @@ app.use(errorHandler);
 app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 // Local uploads static middleware removed for serverless deployment
 
-
 // Handle missing static assets with 404 instead of falling through to index.html
 app.use('/assets', (req, res) => {
   res.status(404).type('text/plain').send('Asset not found');
