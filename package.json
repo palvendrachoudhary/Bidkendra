@@ -1,0 +1,30 @@
+{
+  "name": "bidkendra-fullstack",
+  "version": "1.0.0",
+  "description": "Bidkendra - Fullstack unified for Vercel deployment",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "node backend/src/server.js"
+  },
+  "dependencies": {
+    "@babel/core": "^8.0.5",
+    "@babel/generator": "^8.0.5",
+    "@babel/parser": "^8.0.5",
+    "@babel/traverse": "^8.0.5",
+    "axios": "^1.20.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-validator": "^7.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^2.4.5",
+    "pg": "^8.23.0",
+    "twilio": "^6.1.1",
+    "uuid": "^10.0.0"
+  }
+}

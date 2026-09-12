@@ -88,7 +88,6 @@ app.use(errorHandler);
 app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 // Local uploads static middleware removed for serverless deployment
 
-
 // Handle missing static assets with 404 instead of falling through to index.html
 app.use('/assets', (req, res) => {
   res.status(404).type('text/plain').send('Asset not found');
@@ -172,12 +171,18 @@ const gracefulShutdown = (signal) => {
 process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
 
-// Initialize database (async, sql.js), then start server
-db.init().then(() => {
-  startServer(DEFAULT_PORT);
-}).catch(err => {
-  console.error('❌ Failed to initialize database:', err);
-  process.exit(1);
-});
+// Initialize database, then start server (skip port listen on Vercel serverless)
+if (!process.env.VERCEL) {
+  db.init().then(() => {
+    startServer(DEFAULT_PORT);
+  }).catch(err => {
+    console.error('❌ Failed to initialize database:', err);
+    process.exit(1);
+  });
+} else {
+  db.init().catch(err => {
+    console.warn('⚠️ Vercel database initialization warning:', err.message);
+  });
+}
 
 module.exports = app;
