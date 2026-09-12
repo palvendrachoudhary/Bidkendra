@@ -1,0 +1,559 @@
+{
+  "timestamp": "2026-09-12T01:06:11.385Z",
+  "totalDurationMs": 84647,
+  "summary": {
+    "total": 65,
+    "passed": 65,
+    "failed": 0,
+    "passRate": 100
+  },
+  "tierBreakdown": {
+    "Tier 1": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "Tier 2": {
+      "total": 31,
+      "passed": 31,
+      "failed": 0
+    },
+    "Tier 3": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "Tier 4": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "Other": {
+      "total": 0,
+      "passed": 0,
+      "failed": 0
+    }
+  },
+  "results": [
+    {
+      "id": "T1.5.1",
+      "name": "GSTIN Verifier passes valid 15-character uppercase GSTIN (33AABCP1234F1Z5)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 2,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.1",
+      "name": "GSTIN Verifier recognizes lowercase OCR text (33aabcp1234f1z5)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.2",
+      "name": "GSTIN Verifier rejects invalid state code > 38 (99AABCP1234F1Z5)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T1.5.2",
+      "name": "PAN Verifier passes valid 10-character corporate PAN (AABCP1234F)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.3",
+      "name": "PAN Verifier recognizes lowercase OCR text (aabcp1234f)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.4",
+      "name": "PAN Verifier recognizes partnership firm PAN entity type F (AAAFK1234F)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.5",
+      "name": "PAN Verifier rejects invalid 4th character entity type (AABXP1234F)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T1.5.3",
+      "name": "MCA Verifier passes valid 21-character corporate CIN (U23201TN2018PTC123456)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.6",
+      "name": "MCA Verifier recognizes lowercase CIN (u23201tn2018ptc123456)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.7",
+      "name": "Non-corporate entity without 21-char CIN does not trigger mandatory gate failure",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T1.5.4",
+      "name": "Udyam Verifier passes standard format (UDYAM-TN-02-0045812)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.2.8",
+      "name": "Udyam Verifier recognizes lowercase OCR text (udyam-tn-02-0045812)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T1.5.5",
+      "name": "Make In India verifies Class-I Local Supplier declaration (72.4%)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.3.1",
+      "name": "Make In India ignores arbitrary percentages (10% advance, 18% GST) without local content context",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.3.2",
+      "name": "Make In India accepts minimum statutory threshold (Local Content: 20.0%)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T2.3.3",
+      "name": "Make In India fails when local content is below 20% (Local Content: 18.5%)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Statutory Verifiers"
+    },
+    {
+      "id": "T1.6.1",
+      "name": "Frontend production build output directory dist/ exists",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T1.6.2",
+      "name": "dist/index.html exists and contains application mounting root element",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T1.6.3",
+      "name": "Compiled JavaScript bundle (index-*.js) exists in dist/assets/ with size > 50KB",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T1.6.4",
+      "name": "Compiled CSS stylesheet (index-*.css) exists in dist/assets/ with compiled Tailwind classes",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T1.6.5",
+      "name": "vite.config.js configures /api dev proxy forwarding to http://localhost:5000",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T2.6.1",
+      "name": "EmailDraftViewer component prop contract in BidderVerification.jsx matches draft prop",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T2.6.2",
+      "name": "Step 2 Scan button automatically handles empty upload by loading demo sample",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T2.6.3",
+      "name": "handleSelectBidder resets previous bidder verification state to prevent contamination",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 2,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T2.6.4",
+      "name": "Header contains authentic CPCL and Ministry of Petroleum & Natural Gas branding",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T2.6.5",
+      "name": "ComplianceReport triggers functional window.print() and document export",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Frontend Build & UI Integrity"
+    },
+    {
+      "id": "T1.3.1",
+      "name": "Server responds to /api/health with HTTP 200 and success: true",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 29,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T1.3.2",
+      "name": "Server intercepts port collision and handles conflict gracefully",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T1.3.3",
+      "name": "Health check API payload contains informative running message",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 3,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T1.3.4",
+      "name": "Server registers SIGINT/SIGTERM handlers for database state preservation",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T1.3.5",
+      "name": "Static catch-all checks existence of dist/index.html to prevent 500 crash",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 8,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T2.1.1",
+      "name": "Server returns clean 404 on undefined API endpoints",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 6,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T2.1.2",
+      "name": "backend/.env is UTF-8 encoded without BOM",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T2.1.3",
+      "name": "JWT token generation has fallback to prevent unhandled secret crashes",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T2.1.4",
+      "name": "Server responds with permissive CORS headers for GeM/CPCL portal access",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 3,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T2.1.5",
+      "name": "Server attaches Helmet security headers on API responses",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 2,
+      "suite": "Server Lifecycle & Startup"
+    },
+    {
+      "id": "T1.1.1",
+      "name": "Accepts snake_case fields (vendor_email, company_name, decision_status, score)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1715,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T1.1.2",
+      "name": "Accepts camelCase fields (bidderName, companyEmail, status, rejectionReason)",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1348,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T1.1.3",
+      "name": "Handles structured emailContent object { subject, body } without corrupting string",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1324,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T1.1.4",
+      "name": "Returns HTTP 200 and simulated delivery mode when remote webhook is unavailable",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 1620,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T1.1.5",
+      "name": "Verification controller enforces axios timeout <= 5000ms on Viasocket requests",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T2.2.1",
+      "name": "Gracefully processes completely empty payload {} without unhandled exception",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1316,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T2.2.2",
+      "name": "Safely handles boundary score values (0, 100, -1, 105)",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1423,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T2.2.3",
+      "name": "Preserves Unicode, Devanagari script, and special characters in payload",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1550,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T2.2.4",
+      "name": "Handles explicit null values for optional and required fields",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 1666,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T2.2.5",
+      "name": "Controller persists notification dispatch audit record in database",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 0,
+      "suite": "Webhook Notification Gateway"
+    },
+    {
+      "id": "T1.4.1",
+      "name": "Dummy text without statutory credentials returns 0% score and NOT_ELIGIBLE without crashing",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 3962,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T1.4.2",
+      "name": "Dummy PDF without statutory numbers returns 0% score and NOT_ELIGIBLE verdict",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 3760,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T1.4.3",
+      "name": "Compliant CPCL proposal returns overallScore >= 80% and ELIGIBLE verdict",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 2357,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T1.4.4",
+      "name": "Response includes aiSummary, aiTranslation, and emailDraft properties",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 2708,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T1.4.5",
+      "name": "Rejection email draft itemizes failed checks without undefined properties",
+      "tier": "Tier 1",
+      "pass": true,
+      "durationMs": 4500,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T2.4.1",
+      "name": "Empty document text returns 200 with 0% score rather than throwing exception",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 3769,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T2.4.2",
+      "name": "Corrupted binary stream returns NOT_ELIGIBLE safely without process exit",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 3696,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T2.4.3",
+      "name": "SQL injection attack strings in document content are sanitized",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 3701,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T2.4.4",
+      "name": "Calculates accurate automation coverage percentage",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 2340,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T2.4.5",
+      "name": "Computes valid 64-character SHA-256 document hash",
+      "tier": "Tier 2",
+      "pass": true,
+      "durationMs": 2373,
+      "suite": "Document Verification & OCR Pipeline"
+    },
+    {
+      "id": "T3.1",
+      "name": "Document scan failure correctly populates itemized gate list in AI rejection email draft",
+      "tier": "Tier 3",
+      "pass": true,
+      "durationMs": 6680,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T3.2",
+      "name": "Seamlessly chains document scan output directly into webhook notification dispatch",
+      "tier": "Tier 3",
+      "pass": true,
+      "durationMs": 4076,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T3.3",
+      "name": "Mixed lowercase OCR text flows through scoring engine and computes >= 80% score",
+      "tier": "Tier 3",
+      "pass": true,
+      "durationMs": 2351,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T3.4",
+      "name": "Non-corporate partnership bid achieves qualified score without mandatory CIN disqualification",
+      "tier": "Tier 3",
+      "pass": true,
+      "durationMs": 2363,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T4.1",
+      "name": "Scenario 1: CPCL Pipeline Tender (PetroTech) - Complete Approval & Notification Workflow",
+      "tier": "Tier 4",
+      "pass": true,
+      "durationMs": 7251,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T4.2",
+      "name": "Scenario 2: CPCL Valve Tender (Shell Entity) - Complete Disqualification & Rejection Workflow",
+      "tier": "Tier 4",
+      "pass": true,
+      "durationMs": 5388,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T4.3",
+      "name": "Scenario 3: CPCL Fabrication Tender (Kaveri Engineering) - MSME Purchase Preference Consideration",
+      "tier": "Tier 4",
+      "pass": true,
+      "durationMs": 3667,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T4.4",
+      "name": "Scenario 4: Proposal containing 18% GST and 10% advance correctly extracts separate 60% MII",
+      "tier": "Tier 4",
+      "pass": true,
+      "durationMs": 3690,
+      "suite": "E2E Scenarios & Cross-Feature"
+    },
+    {
+      "id": "T4.5",
+      "name": "Scenario 5: Complete Hackathon Offline Flow executes flawlessly with zero network errors",
+      "tier": "Tier 4",
+      "pass": true,
+      "durationMs": 3985,
+      "suite": "E2E Scenarios & Cross-Feature"
+    }
+  ]
+}

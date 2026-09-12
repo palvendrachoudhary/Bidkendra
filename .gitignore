@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite
+backend/data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Uploads
+uploads/
+temp/
+
+# ML Models (large files)
+ai-engine/ml_models/*.pkl
+ai-engine/ml_models/*.h5
+ai-engine/ml_models/*.pt

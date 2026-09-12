@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # React Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:5000/api
+      - VITE_AI_URL=http://localhost:8000/api/ai
+    depends_on:
+      - backend
+      - ai-engine
+    networks:
+      - bidverify-network
+
+  # Node.js Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../docker/Dockerfile.backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - JWT_SECRET=bidverify-sih-2026-secret-key
+      - NODE_ENV=development
+      - AI_ENGINE_URL=http://ai-engine:8000
+    depends_on:
+      - ai-engine
+    volumes:
+      - ./backend/data:/app/data
+    networks:
+      - bidverify-network
+
+  # Python AI Engine
+  ai-engine:
+    build:
+      context: ./ai-engine
+      dockerfile: ../docker/Dockerfile.ai-engine
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - bidverify-network
+
+networks:
+  bidverify-network:
+    driver: bridge

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  @apply bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100;
+}
+
+/* Custom Chart Animations */
+@keyframes fillGauge {
+  0% { stroke-dasharray: 0 100; }
+}
+
+.gauge-arc {
+  animation: fillGauge 1s ease-out forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Hide Google Translate ugly bar and fix layout */
+.goog-te-banner-frame.skiptranslate, .goog-te-banner-frame {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+#goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
