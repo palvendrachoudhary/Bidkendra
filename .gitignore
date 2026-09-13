@@ -9,6 +9,8 @@ env/
 # Build outputs
 dist/
 build/
+.next/
+out/
 *.egg-info/
 
 # Environment files

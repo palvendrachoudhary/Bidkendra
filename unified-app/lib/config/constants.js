@@ -1,0 +1,44 @@
+module.exports = {
+  ROLES: {
+    ADMIN: 'ADMIN',
+    OFFICER: 'OFFICER',
+    AUDITOR: 'AUDITOR',
+    BIDDER: 'BIDDER'
+  },
+  COMPLIANCE_CATEGORIES: {
+    DIGILOCKER: 'DIGILOCKER',
+    UDYAM: 'UDYAM',
+    GST: 'GST',
+    PAN: 'PAN',
+    INCOME_TAX: 'INCOME_TAX',
+    MAKE_IN_INDIA: 'MAKE_IN_INDIA',
+    EPFO: 'EPFO',
+    ESIC: 'ESIC',
+    STARTUP: 'STARTUP',
+    NSIC: 'NSIC',
+    OEM: 'OEM',
+    BLACKLIST: 'BLACKLIST',
+    MCA: 'MCA',
+    LABOUR_LICENSE: 'LABOUR_LICENSE'
+  },
+  RISK_LEVELS: {
+    LOW: 'Low',
+    MEDIUM: 'Medium',
+    HIGH: 'High',
+    CRITICAL: 'Critical'
+  },
+  TENDER_STATUS: {
+    OPEN: 'OPEN',
+    CLOSED: 'CLOSED',
+    AWARDED: 'AWARDED',
+    CANCELLED: 'CANCELLED'
+  },
+  BID_STATUS: {
+    DRAFT: 'DRAFT',
+    SUBMITTED: 'SUBMITTED',
+    UNDER_REVIEW: 'UNDER_REVIEW',
+    VERIFIED: 'VERIFIED',
+    REJECTED: 'REJECTED',
+    ACCEPTED: 'ACCEPTED'
+  }
+};
