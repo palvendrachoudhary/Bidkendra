@@ -7,15 +7,15 @@ export async function POST(req) {
     await db.init();
     const body = await req.json().catch(() => ({}));
     const {
-      bidder_id = null,
-      vendor_name = 'Vendor',
-      vendor_email = 'vendor@example.com',
-      phone_number = '',
-      alert_type = 'STATUTORY_DEFICIENCY',
-      severity = 'WARNING',
-      title = 'Active Bid Curing Notice',
-      message = '',
-      flagged_items = []
+      bidder_id = body.bidderId || null,
+      vendor_name = body.vendorName || 'Vendor',
+      vendor_email = body.vendorEmail || 'vendor@example.com',
+      phone_number = body.phoneNumber || '',
+      alert_type = body.alert_type || 'STATUTORY_DEFICIENCY',
+      severity = body.severity || 'WARNING',
+      title = body.title || 'Active Bid Curing Notice',
+      message = body.message || '',
+      flagged_items = body.flaggedItems || []
     } = body;
 
     const alertId = 'alt-' + Date.now();

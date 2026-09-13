@@ -7,14 +7,14 @@ export async function POST(req) {
     await db.init();
     const body = await req.json().catch(() => ({}));
     const {
-      company_name = 'Vendor',
-      vendor_email = 'vendor@example.com',
-      decision_status = 'REJECTED',
-      score = 0,
-      rejection_reason = '',
-      notes = '',
-      emailContent = '',
-      submissionId
+      company_name = body.bidderName || 'Vendor',
+      vendor_email = body.companyEmail || 'vendor@example.com',
+      decision_status = body.status || 'REJECTED',
+      score = body.score || 0,
+      rejection_reason = body.rejectionReason || '',
+      notes = body.notes || '',
+      emailContent = body.emailContent || '',
+      submissionId = body.submissionId
     } = body;
 
     if (submissionId) {
