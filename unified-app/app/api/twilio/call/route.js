@@ -36,16 +36,26 @@ export async function POST(req) {
         });
       } catch (twilioErr) {
         console.warn('Live Twilio dispatch failed, falling back to simulation:', twilioErr.message);
+        
+        return NextResponse.json({
+          success: true,
+          mode: 'simulated',
+          callSid: 'CA-SIM-' + Date.now(),
+          status: 'completed',
+          message: 'Simulated automated voice call placed successfully to ' + (phoneNumber || 'Vendor'),
+          details: { twilioError: twilioErr.message }
+        });
       }
     }
 
-    // High-fidelity simulated demo fallback
+    // High-fidelity simulated demo fallback (no credentials)
     return NextResponse.json({
       success: true,
       mode: 'simulated',
       callSid: 'CA-SIM-' + Date.now(),
       status: 'completed',
-      message: 'Simulated automated voice call placed successfully to ' + (phoneNumber || 'Vendor')
+      message: 'Simulated automated voice call placed successfully to ' + (phoneNumber || 'Vendor'),
+      details: { twilioError: 'Missing Twilio credentials in Vercel Environment Variables.' }
     });
   } catch (err) {
     return NextResponse.json({
